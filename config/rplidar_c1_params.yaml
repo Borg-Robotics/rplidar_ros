@@ -1,0 +1,33 @@
+# RPLiDAR ROS2 Node Parameters
+# This file contains all configurable parameters for the RPLiDAR node
+
+/**:
+  ros__parameters:
+    # Communication channel type: "serial", "tcp", "udp"
+    channel_type: "serial"
+    
+    # TCP connection parameters (used when channel_type is "tcp")
+    tcp_ip: "192.168.0.7"
+    tcp_port: 20108
+    
+    # UDP connection parameters (used when channel_type is "udp") 
+    udp_ip: "192.168.11.2"
+    udp_port: 8089
+    
+    # Serial connection parameters (used when channel_type is "serial")
+    serial_port: "/dev/ttyUSB0"
+    serial_baudrate: 460800  # 1000000 for A1/A2, 256000 for A3
+    
+    # Frame and topic configuration
+    frame_id: "laser"
+    topic_name: "scan"
+    
+    # Scan behavior parameters
+    inverted: false
+    angle_compensate: true
+    flip_x_axis: false
+    auto_standby: false
+    
+    # Scan mode and frequency
+    scan_mode: "Standard"  
+    scan_frequency: 10.0  # Default 10 Hz for serial/tcp, 20 Hz for UDP

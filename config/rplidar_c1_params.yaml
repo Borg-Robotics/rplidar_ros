@@ -1,7 +1,7 @@
 # RPLiDAR ROS2 Node Parameters
 # This file contains all configurable parameters for the RPLiDAR node
 
-/**:
+/rplidar_node:
   ros__parameters:
     # Communication channel type: "serial", "tcp", "udp"
     channel_type: "serial"
